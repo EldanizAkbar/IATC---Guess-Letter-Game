@@ -43,7 +43,7 @@ window.onkeyup = function (e) {
     document.getElementById("win").innerText = wins;
     guesses_left = 9;
     document.getElementById("guesses_left").innerText = guesses_left;
-    alert("You won! Game is starting again))");
+    alert("You won! Game is starting again)) " + " Letter is " + e.key);
     computerLetter = generateRandomLetter();
     document.getElementById("guesses_letters").innerText = " ";
     guesses = "";
@@ -52,7 +52,7 @@ window.onkeyup = function (e) {
     guesses_left--;
     document.getElementById("guesses_left").innerText = guesses_left;
     if (guesses_left <= 0) {
-      alert("You lost! Game is starting again((");
+      alert("You lost! Game is starting again(( " + " Letter was --- " + computerLetter);
       computerLetter = generateRandomLetter();
       losses++;
       guesses_left = 9;
